@@ -4,26 +4,257 @@
 
 /* -----------BASIC------------ */
 
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
 /* ---------- HEADER----------- */
+
+header ul{
+    display: flex;
+    justify-content: center;
+}
+
+header ul li{
+    list-style: none;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    padding: 0.4rem;
+}
+
+header a{
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.6rem;
+    color: rgb(116, 116, 116);
+    font-family: 'Crimson Pro';
+    border-right: none;
+    padding-right: 0;
+    border-right: none;
+    padding-right: 0;
+}
+
+#bottom-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem;
+    justify-content: space-between;
+}
 
 /* ---------- NAVIGATION ---------- */
 
+nav{
+    flex-direction: column;
+    padding: 1.5rem;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 2rem;
+    }
+
+nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+nav ul li{
+    list-style: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: rgb(116, 116, 116);
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 0.9rem;
+    letter-spacing: normal;
+}
+
 /* -------------- CONTAINERS ----------- */
+
+#main-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+}
+
+#grid-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0 2rem 0;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+    
+}
 
 /* ---------------- ARTICLES ---------------- */
 
+#grid-container article{
+    display: flex;
+    flex-direction: column;
+}
+
+.flex img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.flex h5, h6, p{
+    text-align: center;
+    padding: 0.2rem;
+}
+
+article{
+    padding: 1rem;
+}
+
+
 /* -------------------- FOOTER ---------------- */
 
-/* ------------------- OTHER --------------- */
+footer{
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    margin-top: 4rem;
+    padding: 2rem;
+    border-top: 1px solid gray;
+}
+
+/* ------------------- GENERAL --------------- */
+
+main h3{
+    text-align: center;
+    font-weight: 300;
+    font-size: 0.8rem;
+    padding-top: 4rem;
+}
 
 /* ---------------------------------------------------------- */
 /* ------------------- CSS FOR LARGER SCREENS --------------- */
 /* ---------------------------------------------------------- */
 
+@media screen and (min-width: 700px){
+
 /* ---------- HEADER----------- */
+
+    header{
+        display: flex;
+        flex-direction: column;
+        background-color: #eeeeee;
+    }
+
+    #bottom-header{
+        flex-direction: row;
+        padding-right: 4rem;
+        padding-left: 4rem;
+        padding-top: 4rem;
+        padding-bottom: 10rem;
+    }
+
+    header a{
+        padding-right: 2rem;
+    }
+
+    h1{
+        font-weight: 500;
+    }
 
 /* ---------- NAVIGATION ---------- */
 
+    nav{
+        flex-direction: row;
+    }
+
+    nav ul{
+        flex-wrap:nowrap;
+        gap: 1rem;
+    }
+
+    nav ul li a:hover{
+        text-decoration: underline;
+    }
+
+    .borderclass{
+        border-right: 1px solid rgb(116, 116, 116);
+    }
+
 /* -------------- CONTAINERS ----------- */
 
+    #main-container{
+        display: grid;
+        grid-template-columns: 1repeat(4, auto);
+        grid-template-rows: auto;
+    }
+
+    #grid-container{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+        margin: 4rem 0;
+    }
+
+    #grid-container img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    #grid-container h4:hover{
+        text-decoration: underline;
+    }
+
+    .flex-container{
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-top: 0;
+    }
+
 /* ---------------- ARTICLES ---------------- */
+
+    .flex{
+        flex-basis: 33%;
+        padding: 4rem 2rem;
+    }
+
+    .flex img:hover{
+        transform: scale(1.02);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    #art-1{
+        grid-column-start: span 3;
+    }
+
+    #art-2{
+        grid-column-start: span 1;
+        
+    }  
+
+    #art-3{
+        grid-column-start: span 1;
+        
+    }
+
+    #art-4{
+        grid-column-start: span 3;
+        
+    }
+
+}
