@@ -1,2 +1,0 @@
-# slosne.github.io
-DigiFab
