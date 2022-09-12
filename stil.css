@@ -16,6 +16,11 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 
+a{
+    text-decoration: none;
+    color: rgb(116, 116, 116);
+}
+
 /* ---------- HEADER----------- */
 
 header ul{
@@ -30,10 +35,8 @@ header ul li{
 }
 
 header a{
-    text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 0.6rem;
-    color: rgb(116, 116, 116);
     font-family: 'Crimson Pro';
     padding-right: 0;
     border-right: none;
@@ -71,8 +74,6 @@ nav ul li{
 }
 
 nav ul li a{
-    text-decoration: none;
-    color: rgb(116, 116, 116);
     text-transform: uppercase;
     font-weight: 500;
     font-size: 1.1rem;
@@ -216,7 +217,7 @@ main h3{
         object-fit: cover;
     }
 
-    #grid-container h4:hover{
+    #grid-container h4 a:hover{
         text-decoration: underline;
     }
 
