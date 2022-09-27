@@ -136,11 +136,11 @@ article{
     margin-bottom: 2rem;
 }
 
-#grid-container img:hover{
+/*#grid-container img:hover{
     box-shadow: 0px 0px 0px 2px rgba(101, 101, 101, 0.5), 
             0px 2px 4px rgba(101, 101, 101, 0.5),
             0px 4px 8px rgba(101, 101, 101, 0.5),
-            0px 8px 16px rgba(101, 101, 101, 0.5);
+            0px 8px 16px rgba(101, 101, 101, 0.5);*/
 }
 
 
